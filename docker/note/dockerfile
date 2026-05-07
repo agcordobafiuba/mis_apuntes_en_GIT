@@ -1,0 +1,4 @@
+FROM alpine
+RUN echo "echo Hola, estoy probando Dockerfile" > hola.sh
+RUN chmod +x /hola.sh
+CMD ["sh", "/hola.sh"]

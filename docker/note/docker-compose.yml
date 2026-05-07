@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:                # Primer nivel (2 espacios)
+    build: .          # Segundo nivel (4 espacios)
+    ports:            # Segundo nivel
+      - "5000:5000"   # Tercer nivel (el guion cuenta como espacio)
+    volumes:
+      - .:/code
+    environment:
+      - PASSWORD=pasword
+
+  redis:              # Volvemos al primer nivel (2 espacios)
+    image: "redis:alpine"
